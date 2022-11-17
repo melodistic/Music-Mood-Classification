@@ -1,0 +1,6 @@
+pydub==0.25.1
+numpy==1.21.1
+librosa==0.8.0
+typer==0.4.0
+click==8.0.4
+pandas==1.3.0
