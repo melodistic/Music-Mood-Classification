@@ -58,8 +58,8 @@ if __name__ == '__main__':
     
     separator = Separator('spleeter:2stems')
     data = []
-    count = 0
     for mood in mood_list:
+        count = 0
         try:
             os.mkdir("instrumental")
         except:

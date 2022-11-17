@@ -44,9 +44,21 @@ RUN mkdir /app/song
 COPY --from=downloader /app/song /app/song
 
 COPY extract_song.py .
-COPY generate_spectrogram.py .
-COPY process_data.py .
 
 RUN python extract_song.py
+
+COPY generate_spectrogram.py .
+
 RUN python generate_spectrogram.py
+
+COPY process_data.py .
+COPY model_v1.h5 .
+
+RUN mkdir /app/features
+RUN mkdir /app/csv_data
+
 RUN python process_data.py
+
+COPY combine_csv.py .
+
+RUN python combine_csv.py

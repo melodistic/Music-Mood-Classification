@@ -4,3 +4,4 @@ librosa==0.8.0
 typer==0.4.0
 click==8.0.4
 pandas==1.3.0
+matplotlib==3.5.1

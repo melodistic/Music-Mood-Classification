@@ -47,14 +47,14 @@ def processing(filenames,moods,pred_feats,start,end,pid):
     df = pd.DataFrame(data)
     df.to_csv("csv_data/" +str(pid) + ".csv", index=False, header=True)
 if __name__ == "__main__":
-    mood_list = os.listdir("spectogram")
+    mood_list = os.listdir("spectrogram")
     process_list = []
     model_path = 'model_v1.h5'
     model = load_model(model_path)
 
     test_image_generator = ImageDataGenerator(rescale=1./255)
     test_data = test_image_generator.flow_from_directory(
-        directory="spectogram",
+        directory="spectrogram",
         class_mode=None,
         target_size=(224,224),
         batch_size=128,shuffle=False)

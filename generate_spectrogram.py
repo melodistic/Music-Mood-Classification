@@ -16,7 +16,7 @@ def save_image(data,filename,mood):
     img = 255-img
     im = Image.fromarray(img)
     im = im.resize((224,224))
-    im.save("spectogram/"+ mood +'/'+ filename)
+    im.save("spectrogram/"+ mood +'/'+ filename)
     del img, im
     gc.collect()
 
