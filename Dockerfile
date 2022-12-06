@@ -62,3 +62,7 @@ RUN python process_data.py
 COPY combine_csv.py .
 
 RUN python combine_csv.py
+
+COPY generate_csv_feature.py .
+
+RUN python generate_csv_feature.py
