@@ -20,5 +20,5 @@ for mood in mood_list:
             with open(song[3], "r") as f:
                 data = json.load(f)
                 new_df.append([song[2],*data])
-        new_df = pd.DataFrame(new_df, columns=["music_path", *["feature_"+str(i) for i in range(512)]])
+        new_df = pd.DataFrame(new_df, columns=["music_path", *["feature_"+str(i) for i in range(1280)]])
         new_df.to_csv(f"features/csv_features/{mood}-{bpm_mode}.csv", index=False)
