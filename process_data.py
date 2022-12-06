@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     print("Finished predict moods")
 
-    feature_model = Model(model.input,model.layers[-6].output)
+    feature_model = Model(model.input,model.layers[-7].output)
     pred_feats = feature_model.predict(test_data)
 
     print("Finished predict features")
